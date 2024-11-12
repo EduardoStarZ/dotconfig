@@ -1,5 +1,0 @@
-shell:
-  program: /bin/bash
-  args:
-    - -c
-      - wal -R

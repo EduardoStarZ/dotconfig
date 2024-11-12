@@ -200,7 +200,7 @@ set $bar-window			 #78824b
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #222222
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #222222
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #222222
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #222222
@@ -219,8 +219,17 @@ bar {
 		}
 }
 
-exec --no-startup-id "xrandr --output HDMI-2 --primary --mode 1440x900_75.00 --pos 0x0 --rotate normal --output DVI-D-1 --off --output VGA-2 --off --output VGA-1-1 --off --output HDMI-1-1 --off"
+# Inner gaps for all windows: space between two adjacent windows (or split containers).
+gaps inner 10
 
-exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start"
+# Outer gaps for all windows: space along the screen edges.
+gaps outer 5
 
-exec --no-startup-id "xwallpaper --zoom Downloads/wallpaper.jpg"
+default_border pixel 3
+default_floating_border pixel 2
+# exec --no-startup-id "xrandr --output HDMI-2 --primary --mode 1440x900_75.00 --pos 0x0 --rotate normal --output DVI-D-1 --off --output VGA-2 --off --output VGA-1-1 --off --output HDMI-1-1 --off"
+
+exec --no-startup-id "dbus-update-activation-environment --all"
+exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
+exec --no-startup-id dunst
+exec --no-startup-id picom
