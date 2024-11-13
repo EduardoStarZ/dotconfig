@@ -1,0 +1,1 @@
+sudo pacman -S python-psutil iw python-netifaces 

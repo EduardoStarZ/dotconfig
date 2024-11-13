@@ -1,0 +1,27 @@
+{
+	"icons": [ "awesome-fonts" ],
+	"colors" : [ {"black" : "#222222", "green" : "#78824b", "orange" : "#B36D43", "yellow" : "#685742", "white" : "#DDDDDD"} ],
+	"defaults": {
+		"separator-block-width": 0,
+		"warning": {
+			"fg": "yellow",
+			"bg": "black"
+		},
+		"critical": {
+			"fg": "black",
+			"bg": "orange"
+		}
+	},
+	"cycle": [
+		{ "fg": "white", "bg": "green" },
+		{ "fg": "white", "bg": "black" },
+		{ "fg": "white", "bg": "orange" },
+		{ "fg": "white", "bg": "yellow" }
+	],
+	"pacman": {
+		"good": {
+			"fg": "#b2b2b2",
+			"bg": "#26362d"
+		}
+	}
+}
