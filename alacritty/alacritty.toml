@@ -23,12 +23,12 @@ padding = {x=10, y=10}
 dynamic_padding = true
 
 [cursor]
-style = {shape="beam", blinking="always"}
+style = {shape="beam", blinking="never"}
 smooth_motion = true
 # 0.0 = cursor is not moving, 1.0 = cursor moves instantly
-smooth_motion_factor = 0.6
+smooth_motion_factor = 0.7
 # 0.0 = broken, 1.0 = cursor shape is unaffected by movement
-smooth_motion_spring = 0.5
+smooth_motion_spring = 0.6
 # Limits how the cursor size may change
 smooth_motion_max_stretch_x = 2.0
 smooth_motion_max_stretch_y = 2.0
@@ -36,3 +36,34 @@ smooth_motion_max_stretch_y = 2.0
 # Override "block" cursor if you don't like how it looks in this fork
 # I prefer "underline"
 block_replace_shape = "beam"
+
+# colors (miasma) https://github.com/xero/miasma.nvim
+[colors]
+indexed_colors = [{ index = 16, color = "0x222222"}]
+
+# Primary colors
+[colors.primary]
+background = "#222222"
+foreground = "#c2c2b0"
+
+# Normal colors
+[colors.normal]
+black = "#222222"
+red = "#685742"
+green = "#5f875f"
+yellow = "#b36d43"
+blue = "#78824b"
+magenta = "#bb7744"
+cyan = "#c9a554"
+white = "#d7c483"
+
+# Bright colors
+[colors.bright]
+black = "#666666"
+red = "#685742"
+green = "#5f875f"
+yellow = "#b36d43"
+blue = "#78824b"
+magenta = "#bb7744"
+cyan = "#c9a554"
+white = "#d7c483"

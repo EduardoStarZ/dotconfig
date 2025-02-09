@@ -55,7 +55,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id dmenu_run -nb "#222222" -sf "#f3f4f5" -sb "#78824b" -sf "#DDDDDD" -fn "JetBrainsMono-10"
+#bindsym $mod+space exec --no-startup-id dmenu_run -nb "#222222" -sf "#f3f4f5" -sb "#78824b" -sf "#DDDDDD" -fn "JetBrainsMono-10"
+bindsym $mod+space exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -63,10 +64,10 @@ bindsym $mod+space exec --no-startup-id dmenu_run -nb "#222222" -sf "#f3f4f5" -s
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -75,10 +76,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ccedilla move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+ccedilla move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -116,7 +117,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
-set $ws3 "3"
+set $ws3 "3 : Browser"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -124,6 +125,15 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11 : Discord"
+set $ws12 "12 : Spotify"
+
+
+assign [class="zen"] $ws3
+assign [class="firefox"] $ws3
+assign [class="legcord"] $ws11
+assign [class="discord"] $ws11
+assign [class="Spotify"] $ws12
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -136,7 +146,8 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-
+bindsym $mod+x workspace number $ws11
+bindsym $mod+z workspace number $ws12
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -148,15 +159,22 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-
+bindsym $mod+Shift+x move container to workspace number $ws11
+bindsym $mod+Shift+z move container to workspace number $ws12
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r restart; exec polybar-msg cmd restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# bindsym $mod+Shift+q exec --no-startup-id i3 exit
 # Screenshots
+
+bindsym $mod+l exec --no-startup-id i3lock -c 222222
+
+bindsym $mod+Shift+q exec i3 exit
+
+
 bindsym Ctrl+Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
@@ -207,30 +225,35 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command .local/bin/bumblebee-status -m nic memory disk cpu2 \
-		pasink date time -p time.format="%H:%M" nic.states="^down" sensors2.chip=0 cpu2.layout="cpu2.cpuload cpu2.coresload cpu2.temp" cpu2.temp_pattern="temp1_input:" disk.path="/home/eduardo/" -t miasma
-		font pango:JetBrains Mono 10
-
-		colors {
-				background #222222
-				separator #757575
-
-				focused_workspace $bar-window $bar-window $text-color
-		}
-}
+# bar {
+#         status_command .local/bin/bumblebee-status -m nic aur-update memory disk cpu2 \
+# 		pasink date time -p time.format="%H:%M" nic.states="^down" nic.format="{ip}" sensors2.chip=0 cpu2.layout="cpu2.cpuload cpu2.coresload cpu2.temp" cpu2.temp_pattern="temp1_input:" disk.path="/home/eduardo/" -t miasma
+# 		font pango:JetBrains Mono 10
+#
+# 		colors {
+# 				background #222222
+# 				separator #757575
+#
+# 				focused_workspace $bar-window $bar-window $text-color
+# 		}
+# }
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
-gaps inner 10
+gaps inner 6
 
 # Outer gaps for all windows: space along the screen edges.
-gaps outer 5
+gaps outer 6
 
-default_border pixel 3
-default_floating_border pixel 2
-# exec --no-startup-id "xrandr --output HDMI-2 --primary --mode 1440x900_75.00 --pos 0x0 --rotate normal --output DVI-D-1 --off --output VGA-2 --off --output VGA-1-1 --off --output HDMI-1-1 --off"
+gaps bottom 46
+
+default_floating_border pixel 1
+default_border pixel 4
+
+title_align center
 
 exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
 exec --no-startup-id picom
+exec --no-startup-id polybar
+exec --no-startup-id xwallpaper --zoom Downloads/wallpaper.jpg
