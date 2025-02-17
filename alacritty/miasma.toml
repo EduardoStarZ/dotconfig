@@ -2,7 +2,7 @@
 size = 14.0
 
 [font.bold]
-family = 'JetBrains Mono'
+family = "JetBrains Mono"
 style = "Bold"
 
 [font.bold_italic]
@@ -18,7 +18,7 @@ family = "JetBrains Mono"
 style = "Regular"
 
 [window]
-opacity = 0.95
+opacity = 1
 padding = {x=10, y=10}
 dynamic_padding = true
 
@@ -43,27 +43,27 @@ indexed_colors = [{ index = 16, color = "0x222222"}]
 
 # Primary colors
 [colors.primary]
-background = "#101010"
-foreground = "#F9F9E0"
+background = "#222222"
+foreground = "#c2c2b0"
 
 # Normal colors
 [colors.normal]
-black = "#212121"
-red = "#EF6262"
-green = "#3AA6B9"
-yellow = "#EF6262"
-blue = "#1D5B79"
-magenta = "#FF9EAA"
-cyan = "#FF9EAA"
-white = "#F9F9E0"
+black = "#222222"
+red = "#685742"
+green = "#5f875f"
+yellow = "#b36d43"
+blue = "#78824b"
+magenta = "#bb7744"
+cyan = "#c9a554"
+white = "#d7c483"
 
 # Bright colors
 [colors.bright]
-black = "#212121"
-red = "#EF6262"
-green = "#3AA6B9"
-yellow = "#EF6262"
-blue = "#1D5B79"
-magenta = "#FF9EAA"
-cyan = "#FF9EAA"
-white = "#F9F9E0"
+black = "#666666"
+red = "#685742"
+green = "#5f875f"
+yellow = "#b36d43"
+blue = "#78824b"
+magenta = "#bb7744"
+cyan = "#c9a554"
+white = "#d7c483"
