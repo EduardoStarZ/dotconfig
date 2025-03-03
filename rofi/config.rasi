@@ -8,20 +8,15 @@ configuration {
   icon-theme: "Papirus";
 }
 
-@theme "/dev/null"
+@theme "/usr/share/rofi/themes/sidebar"
 
 * {
-  bg: #1D5B79;
-  bg-alt: #3AA6B9;
-  bg-selected: #FFD0D0;
-
+  bg: #FFD0D0;
+  bg-alt: #FF9EAA;
+  bg-selected: #212121;
   fg: #000000;
-  fg-alt: #FFD0D0;
+  fg-alt: #000000;
 
-  window-border-color: #FF9EAA;
-
-  background-color: @bg;
-  
   border: 0;
   margin: 0;
   padding: 0;
@@ -30,12 +25,15 @@ configuration {
 
 element {
   padding: 12;
-  text-color: @fg-alt;
+  text-color: @fg;
+  background-color: @bg;
 }
 
-element selected {
-  background-color: @bg-selected;
+element selected normal {
   text-color: @fg;
+  border-radius: 24;
+  border: 0;
+  background-color: @bg-alt;
 }
 
 element-text {
@@ -43,13 +41,21 @@ element-text {
   text-color: inherit;
 }
 
+element-icon {
+  background-color: transparent;
+}
+
 entry {
   background-color: @bg-alt;
-  padding: 12;
+  padding: 18;
   text-color: @fg;
+  border-radius: 24;
 }
 
 inputbar {
+  margin: 20 10 10 30;
+  background-color: #00000000;
+  border-color: #00000000;
   children: [entry];
 }
 
@@ -73,5 +79,8 @@ prompt {
 
 window {
   transparency: "real";
+  margin: 20 0 20 10;
+  border-radius: 16;
+  border: 4;
+  border-color: #FF9EAA;
 }
-
