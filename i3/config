@@ -173,7 +173,8 @@ bindsym $mod+l exec --no-startup-id i3lock -c 222222
 
 bindsym $mod+Shift+q exec i3 exit
 
-bindsym $mod+Shift+e exec alacritty --command yazi
+bindsym $mod+Shift+e exec --no-startup-id alacritty --command yazi
+bindsym $mod+m exec --no-startup-id dunstctl history-pop
 
 
 bindsym Ctrl+Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
