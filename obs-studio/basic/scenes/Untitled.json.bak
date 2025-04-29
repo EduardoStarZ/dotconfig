@@ -77,12 +77,12 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
+                "id_counter": 2,
                 "custom_size": false,
                 "items": [
                     {
                         "name": "Window Capture (Xcomposite)",
-                        "source_uuid": "9106914c-51d8-4c90-be36-564c27c0aa4f",
+                        "source_uuid": "c51a4e3f-c9e9-4056-b492-a07c16ae8c16",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -98,7 +98,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 1,
+                        "id": 2,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -150,8 +150,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -161,11 +161,11 @@
         {
             "prev_ver": 520093699,
             "name": "Window Capture (Xcomposite)",
-            "uuid": "9106914c-51d8-4c90-be36-564c27c0aa4f",
+            "uuid": "c51a4e3f-c9e9-4056-b492-a07c16ae8c16",
             "id": "xcomposite_input",
             "versioned_id": "xcomposite_input",
             "settings": {
-                "capture_window": "58720263\r\nMinecraft* 1.21.4 - Multiplayer (3rd-party Server)\r\nMinecraft* 1.21.4"
+                "capture_window": "69206023\r\nMinecraft* 1.21.4 - Multiplayer (3rd-party Server)\r\nMinecraft* 1.21.4"
             },
             "mixers": 0,
             "sync": 0,
