@@ -1,0 +1,10 @@
+[opener]
+play = [
+	{ run = 'vlc "$@"', orphan = true, for = "unix" },
+]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+open = [
+	{ run = 'coreimage "$@"', desc = "Open" },
+]
