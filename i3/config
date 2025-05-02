@@ -244,9 +244,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 gaps inner 6
 
 # Outer gaps for all windows: space along the screen edges.
-gaps outer 6
+gaps outer 2
 
-gaps bottom 46
+gaps bottom 40
 
 default_floating_border pixel 1
 default_border pixel 4
