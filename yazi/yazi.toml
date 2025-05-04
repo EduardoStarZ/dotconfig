@@ -6,5 +6,5 @@ edit = [
 	{ run = 'nvim "$@"', block = true, for = "unix" },
 ]
 open = [
-	{ run = 'coreimage "$@"', desc = "Open" },
+	{ run = 'mirage "$@"', desc = "Open" },
 ]
