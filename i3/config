@@ -116,7 +116,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
-set $ws2 "2"
+set $ws2 "2 : Launcher"
 set $ws3 "3 : Browser"
 set $ws4 "4"
 set $ws5 "5"
@@ -124,11 +124,13 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10 : Logs"
 set $ws11 "11 : Discord"
 set $ws12 "12 : Spotify"
 
-
+assign [class="minecraft-launcher"] $ws1
+assign [class="steam"] $ws2
+assign [class="steamwebhelper"] $ws2
 assign [class="zen"] $ws3
 assign [class="firefox"] $ws3
 assign [class="legcord"] $ws11

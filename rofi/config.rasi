@@ -11,11 +11,11 @@ configuration {
 @theme "/usr/share/rofi/themes/sidebar"
 
 * {
-  bg: #FFD0D0;
-  bg-alt: #FF9EAA;
+  bg: #303030;
+  bg-alt: #1D5B79;
   bg-selected: #212121;
-  fg: #000000;
-  fg-alt: #000000;
+  fg: #DDDDDD;
+  fg-alt: #DDDDDD;
 
   border: 0;
   margin: 0;
@@ -30,8 +30,8 @@ element {
 }
 
 element selected normal {
-  text-color: @fg;
-  border-radius: 24;
+  text-color: @fg-alt;
+  border-radius: 8;
   border: 0;
   background-color: @bg-alt;
 }
@@ -49,7 +49,7 @@ entry {
   background-color: @bg-alt;
   padding: 18;
   text-color: @fg;
-  border-radius: 24;
+  border-radius: 8;
 }
 
 inputbar {
@@ -71,7 +71,7 @@ mainbox {
 }
 
 prompt {
-  background-color: @bg-alt;
+  background-color: @bg;
   enabled: true;
   padding: 12 0 0 12;
   text-color: @fg;
@@ -80,7 +80,7 @@ prompt {
 window {
   transparency: "real";
   margin: 20 0 20 10;
-  border-radius: 16;
-  border: 4;
-  border-color: #FF9EAA;
+  border-radius: 8;
+  border: 1;
+  border-color: @bg-alt;
 }
