@@ -1,9 +1,8 @@
 {
-	"separator": " | ",
+	"separator": "     ",
 	"actions": 
 	[
 		{
-			"prefix": "🔊 ",
 			"updateSignal": "36",
 			"command": "amixer get Master | awk ' \/%\/ {print $5 $6}' | head -1 | sed -e 's\/]\\[\/ \/g'",
 			"timer": "1s"
@@ -26,7 +25,6 @@
 		},
 
 		{
-			"prefix": "🗓 ",
 			"updateSignal": "35",
 			"command": "#Date",		
 			"format": "Monday 02/01/2006 15:04:05",		
