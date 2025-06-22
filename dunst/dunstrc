@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 5x20
+    offset = 5x30
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 1
@@ -61,7 +61,7 @@
     progress_bar_max_width = 300
 
     # Corner radius for the progress bar. 0 disables rounded corners.
-    progress_bar_corner_radius = 4
+    progress_bar_corner_radius = 2
 
     # Define which corners to round when drawing the progress bar. If progress_bar_corner_radius
     # is set to 0 this option will be ignored.
@@ -189,7 +189,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
