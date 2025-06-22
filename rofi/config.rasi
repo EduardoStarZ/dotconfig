@@ -79,7 +79,7 @@ prompt {
 
 window {
   transparency: "real";
-  margin: 20 0 20 10;
+  margin: 40 0 20 10;
   border-radius: 8;
   border: 1;
   border-color: @bg-alt;
