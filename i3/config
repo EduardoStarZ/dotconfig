@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+q kill
@@ -222,7 +222,7 @@ set $bar-window			 #78824b
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.focused          $urgent-bg-color   $urgent-bg-color   $text-color          $urgent-bg-color
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #222222
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #222222
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #222222
@@ -243,15 +243,13 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # }
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
-gaps inner 6
+gaps inner 5
 
 # Outer gaps for all windows: space along the screen edges.
 gaps outer 2
 
-gaps bottom 40
-
 default_floating_border pixel 1
-default_border pixel 4
+default_border pixel 1
 
 title_align center
 
