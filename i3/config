@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono 10
+font pango:JetBrainsMono 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -102,7 +102,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Tab floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+d focus mode_toggle
@@ -248,8 +248,8 @@ gaps inner 5
 # Outer gaps for all windows: space along the screen edges.
 gaps outer 2
 
-default_floating_border pixel 1
 default_border pixel 1
+default_floating_border pixel 0
 
 title_align center
 
@@ -261,3 +261,4 @@ exec --no-startup-id picom
 exec --no-startup-id polybar
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id xborder --border-rgba EF6262F --border-width 2
+exec --no-startup-id discord
