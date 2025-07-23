@@ -171,11 +171,11 @@ bindsym $mod+Shift+r restart; exec polybar-msg cmd restart
 
 # Screenshots
 
-bindsym $mod+l exec --no-startup-id i3lock -c 222222
+# bindsym $mod+l exec --no-startup-id i3lock -c 222222
 
 bindsym $mod+Shift+q exec i3 exit
 
-bindsym $mod+Shift+e exec --no-startup-id alacritty --command yazi
+bindsym $mod+Shift+e exec --no-startup-id st -e yazi
 bindsym $mod+m exec --no-startup-id dunstctl history-pop
 
 
@@ -260,3 +260,4 @@ exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id polybar
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
+exec --no-startup-id xborder --border-rgba EF6262F --border-width 2
