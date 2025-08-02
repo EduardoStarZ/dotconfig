@@ -258,8 +258,7 @@ exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
 exec --no-startup-id picom
-exec --no-startup-id polybar
+exec --no-startup-id polybar example
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id discord
 exec --no-startup-id xborder --border-rgba EF6262F --border-width 2
-
