@@ -116,17 +116,17 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
-set $ws2 "2 : Launcher"
-set $ws3 "3 : Browser"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10 : Logs"
-set $ws11 "11 : Discord"
-set $ws12 "12 : Spotify"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
 
 assign [class="minecraft-launcher"] $ws1
 assign [class="steam"] $ws2
@@ -258,7 +258,10 @@ exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
 exec --no-startup-id picom
-exec --no-startup-id polybar example
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id discord
 exec --no-startup-id xborder --border-rgba EF6262F --border-width 2
+exec --no-startup-id polybar workspaces
+exec --no-startup-id polybar info
+exec --no-startup-id polybar title
+exec --no-startup-id polybar spacer
