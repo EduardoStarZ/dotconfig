@@ -260,7 +260,7 @@ exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id discord
-exec --no-startup-id xborder --border-rgba EF6262F --border-width 2
+exec --no-startup-id xborder --border-rgba EF6262F --border-width 1
 exec --no-startup-id polybar workspaces
 exec --no-startup-id polybar info
 exec --no-startup-id polybar title
