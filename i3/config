@@ -217,7 +217,7 @@ set $bg-color 	         #1D5B79
 set $inactive-bg-color   #222222
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #EF6262
+set $urgent-bg-color     #d7c483
 set $bar-window			 #78824b
 
 # window colors
@@ -260,7 +260,7 @@ exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id discord
-exec --no-startup-id xborder --border-rgba EF6262F --border-width 1
+exec --no-startup-id xborder --border-red 215 --border-green 196 --border-blue 131 --border-width 1
 exec --no-startup-id polybar workspaces
 exec --no-startup-id polybar info
 exec --no-startup-id polybar title

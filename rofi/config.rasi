@@ -11,11 +11,11 @@ configuration {
 @theme "/usr/share/rofi/themes/sidebar"
 
 * {
-  bg: #303030;
-  bg-alt: #1D5B79;
+  bg: #212121;
+  bg-alt: #685742;
   bg-selected: #212121;
-  fg: #DDDDDD;
-  fg-alt: #DDDDDD;
+  fg: #c9a554;
+  fg-alt: #d7c483;
 
   border: 0;
   margin: 0;
