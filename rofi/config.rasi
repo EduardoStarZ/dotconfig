@@ -8,7 +8,7 @@ configuration {
   icon-theme: "Papirus";
 }
 
-@theme "/usr/share/rofi/themes/sidebar"
+@theme "/usr/share/rofi/themes/material"
 
 * {
   bg: #212121;
@@ -68,6 +68,9 @@ listview {
 mainbox {
   background-color: @bg;
   children: [inputbar, listview];
+  border-color: @fg-alt;
+  border-radius: 6;
+  border: 2px;
 }
 
 prompt {
@@ -83,4 +86,11 @@ window {
   border-radius: 8;
   border: 1;
   border-color: @bg-alt;
+}
+
+scrollbar {
+	border-radius: 2;
+	background-color: @bg-alt;
+	border-color: @bg-alt;
+	handle-color: @fg;
 }

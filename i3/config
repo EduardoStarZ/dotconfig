@@ -128,13 +128,15 @@ set $ws10 "10"
 set $ws11 "11"
 set $ws12 "12"
 
-assign [class="minecraft-launcher"] $ws1
+assign [class="minecraft-launcher"] $ws2
+assign [class="Minecraft Launcher"] $ws2
 assign [class="steam"] $ws2
 assign [class="steamwebhelper"] $ws2
 assign [class="zen"] $ws3
 assign [class="firefox"] $ws3
 assign [class="legcord"] $ws11
 assign [class="discord"] $ws11
+assign [class="vesktop"] $ws11
 assign [class="Spotify"] $ws12
 
 # switch to workspace
@@ -253,14 +255,14 @@ default_floating_border pixel 0
 
 title_align center
 
+exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
 exec --no-startup-id export PATH=$HOME/.local/bin:$PATH:/go/bin/:$PATH
 exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
-exec --no-startup-id picom
-exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
-exec --no-startup-id discord
-exec --no-startup-id xborder --border-red 215 --border-green 196 --border-blue 131 --border-width 1
+exec --no-startup-id fastcompmgr
+exec --no-startup-id vesktop
+# exec --no-startup-id xborder --border-red 215 --border-green 196 --border-blue 131 --border-width 1
 exec --no-startup-id polybar workspaces
 exec --no-startup-id polybar info
 exec --no-startup-id polybar title
