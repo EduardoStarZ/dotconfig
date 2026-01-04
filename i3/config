@@ -168,7 +168,7 @@ bindsym $mod+Shift+z move container to workspace number $ws12
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart; exec polybar-msg cmd restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 
 # Screenshots
@@ -250,6 +250,8 @@ gaps inner 5
 # Outer gaps for all windows: space along the screen edges.
 gaps outer 2
 
+gaps top 30
+
 default_border pixel 1
 default_floating_border pixel 0
 
@@ -263,7 +265,4 @@ exec --no-startup-id dunst
 exec --no-startup-id fastcompmgr
 exec --no-startup-id vesktop
 # exec --no-startup-id xborder --border-red 215 --border-green 196 --border-blue 131 --border-width 1
-exec --no-startup-id polybar workspaces
 exec --no-startup-id polybar info
-exec --no-startup-id polybar title
-exec --no-startup-id polybar spacer
