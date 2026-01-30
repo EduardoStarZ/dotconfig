@@ -41,6 +41,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && ./.local/bin/volume-control
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set +5%
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -187,6 +190,8 @@ bindsym $mod+Shift+Print exec --no-startup-id maim --select "/home/$USER/Picture
 ## Clipboard Screenshots
 bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym $mod+F12 exec --no-startup-id togglecomp
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -263,6 +268,4 @@ exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
 exec --no-startup-id fastcompmgr
-exec --no-startup-id vesktop
-# exec --no-startup-id xborder --border-red 215 --border-green 196 --border-blue 131 --border-width 1
 exec --no-startup-id polybar info
