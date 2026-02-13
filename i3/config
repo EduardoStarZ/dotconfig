@@ -191,6 +191,7 @@ bindsym $mod+Shift+Print exec --no-startup-id maim --select "/home/$USER/Picture
 bindsym $mod+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 bindsym $mod+F12 exec --no-startup-id togglecomp
+bindsym $mod+l exec --no-startup-id betterlockscreen -l dimblur --display 1 --span
 
 
 # resize window (you can also use the mouse for that)
@@ -262,7 +263,7 @@ default_floating_border pixel 0
 
 title_align center
 
-exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.png
+exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.jpg
 exec --no-startup-id export PATH=$HOME/.local/bin:$PATH:/go/bin/:$PATH
 exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
