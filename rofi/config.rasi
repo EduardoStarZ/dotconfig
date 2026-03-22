@@ -31,7 +31,7 @@ element {
 
 element selected normal {
   text-color: @fg-alt;
-  border-radius: 8;
+  border-radius: 4;
   border: 0;
   background-color: @bg-alt;
 }
@@ -68,9 +68,7 @@ listview {
 mainbox {
   background-color: @bg;
   children: [inputbar, listview];
-  border-color: @fg-alt;
-  border-radius: 6;
-  border: 2px;
+  border: 0;
 }
 
 prompt {
@@ -83,9 +81,9 @@ prompt {
 window {
   transparency: "real";
   margin: 40 0 20 10;
-  border-radius: 8;
-  border: 1;
-  border-color: @bg-alt;
+  border-radius: 4;
+  border: 2;
+  border-color: @fg-alt;
 }
 
 scrollbar {
