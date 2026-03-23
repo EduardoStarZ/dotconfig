@@ -254,5 +254,6 @@ exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id dunst
 exec --no-startup-id fastcompmgr
 exec --no-startup-id polybar info
+exec --no-startup-id polybar workspaces
 exec --no-startup-id xsettingsd
 exec --no-startup-id xwallpaper --zoom Wallpapers/wallpaper.jpg
