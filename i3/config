@@ -19,7 +19,7 @@ font pango:JetBrainsMono 0
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec --no-startup-id setxkbmap -model "abnt2" -layout br
+exec --no-startup-id wirer
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -226,13 +226,10 @@ default_floating_border pixel 0
 
 title_align center
 
-exec --no-startup-id wirer
 exec --no-startup-id xwallpaper --tile Wallpapers/wallpaper.jpg
 exec --no-startup-id export PATH=$HOME/.local/bin:$PATH:/go/bin/:$PATH
 exec --no-startup-id "dbus-update-activation-environment --all"
 exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets"
 exec --no-startup-id dunst
 exec --no-startup-id fastcompmgr
-exec --no-startup-id polybar info
-exec --no-startup-id polybar workspaces
 exec --no-startup-id xsettingsd
