@@ -157,7 +157,7 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+q exec i3 exit
 
-bindsym $mod+Shift+e exec --no-startup-id st -e yazi
+bindsym $mod+Shift+e exec --no-startup-id st -e musikcube
 bindsym $mod+m exec --no-startup-id dunstctl history-pop
 
 
@@ -233,3 +233,5 @@ exec --no-startup-id "/usr/bin/gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id dunst
 exec --no-startup-id fastcompmgr
 exec --no-startup-id xsettingsd
+exec_always --no-startup-id export XDG_CURRENT_DESKTOP=GNOME
+exec_always --no-startup-id export XDG_SESSION_DESKTOP=GNOME
