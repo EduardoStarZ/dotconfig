@@ -266,7 +266,7 @@ gaps top 30
 
 
 # Defines the border size in pixels.
-default_border pixel 1
+default_border pixel 0
 
 
 # Execute all of the commands below on i3 startup.
