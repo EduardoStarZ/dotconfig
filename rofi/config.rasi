@@ -12,10 +12,12 @@ configuration {
 
 * {
   bg: #212121;
-  bg-alt: #685742;
+  bg-alt: #006D5B;
   bg-selected: #212121;
-  fg: #c9a554;
-  fg-alt: #d7c483;
+  fg: #DDDDDD;
+  fg-alt: #DDDDDD;
+  fg-border: #B85355;
+  fg-handle: #B8393A;
 
   border: 0;
   margin: 0;
@@ -83,12 +85,12 @@ window {
   margin: 40 0 20 10;
   border-radius: 4;
   border: 2;
-  border-color: @fg-alt;
+  border-color: @fg-border;
 }
 
 scrollbar {
 	border-radius: 2;
-	background-color: @bg-alt;
-	border-color: @bg-alt;
-	handle-color: @fg;
+	background-color: @fg-border;
+	border-color: @fg-border;
+	handle-color: @fg-handle;
 }
