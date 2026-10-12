@@ -1,6 +1,7 @@
 {
+    "name": "Untitled",
     "DesktopAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 537001986,
         "name": "Desktop Audio",
         "uuid": "58b88264-bc8b-4da9-9f73-30ffac6c329e",
         "id": "pulse_output_capture",
@@ -11,10 +12,10 @@
         "mixers": 255,
         "sync": 0,
         "flags": 0,
-        "volume": 0.5986724495887756,
+        "volume": 0.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -31,7 +32,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 537001986,
         "name": "Mic/Aux",
         "uuid": "5c8955eb-212c-4abe-986b-a0a7cb32cacb",
         "id": "pulse_input_capture",
@@ -42,7 +43,7 @@
         "mixers": 255,
         "sync": 0,
         "flags": 0,
-        "volume": 0.6327187418937683,
+        "volume": 0.0,
         "balance": 0.5,
         "enabled": true,
         "muted": true,
@@ -62,7 +63,7 @@
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 520093699,
+                "prev_ver": 537001986,
                 "name": "Noise Suppression",
                 "uuid": "ae99a173-f37e-4a90-9825-edc45176ef8c",
                 "id": "noise_suppress_filter",
@@ -86,7 +87,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 520093699,
+                "prev_ver": 537001986,
                 "name": "Noise Gate",
                 "uuid": "9718526c-f608-4144-9c1f-55192cb619ac",
                 "id": "noise_gate_filter",
@@ -110,7 +111,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 520093699,
+                "prev_ver": 537001986,
                 "name": "Gain",
                 "uuid": "33abb6e6-3081-43cc-ad4b-b5fe473f7040",
                 "id": "gain_filter",
@@ -137,28 +138,78 @@
             }
         ]
     },
-    "current_scene": "Scene",
-    "current_program_scene": "Scene",
-    "scene_order": [
-        {
-            "name": "Scene"
-        }
-    ],
-    "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 537001986,
+            "name": "Window Capture (Xcomposite) 2",
+            "uuid": "72abfdff-175d-491e-9285-6172dde82323",
+            "id": "xcomposite_input",
+            "versioned_id": "xcomposite_input",
+            "settings": {
+                "capture_window": "88080392\r\nHollow Knight Silksong\r\nHollow Knight Silksong",
+                "include_border": true
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Audio Output Capture (PulseAudio)",
+            "uuid": "b363299e-bbcd-4b9a-a542-70fa9fbed5f7",
+            "id": "pulse_output_capture",
+            "versioned_id": "pulse_output_capture",
+            "settings": {
+                "device_id": "default"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 0.2775196433067322,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
             "name": "Scene",
             "uuid": "fa985539-e1e1-4558-99e1-67a30301a8cb",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 4,
+                "id_counter": 9,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "Window Capture (Xcomposite)",
-                        "source_uuid": "c51a4e3f-c9e9-4056-b492-a07c16ae8c16",
+                        "name": "Window Capture (Xcomposite) 2",
+                        "source_uuid": "72abfdff-175d-491e-9285-6172dde82323",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -174,7 +225,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 2,
+                        "id": 5,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -204,10 +255,65 @@
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
-                            "duration": 0
+                            "duration": 300
                         },
                         "hide_transition": {
-                            "duration": 0
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Audio Output Capture (PulseAudio)",
+                        "source_uuid": "b363299e-bbcd-4b9a-a542-70fa9fbed5f7",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1440.0,
+                            "y": 900.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 8,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.600000023841858,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
                         },
                         "private_settings": {}
                     }
@@ -226,42 +332,30 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": []
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 520093699,
-            "name": "Window Capture (Xcomposite)",
-            "uuid": "c51a4e3f-c9e9-4056-b492-a07c16ae8c16",
-            "id": "xcomposite_input",
-            "versioned_id": "xcomposite_input",
-            "settings": {
-                "capture_window": "69206023\r\nMinecraft* 1.21.4 - Multiplayer (3rd-party Server)\r\nMinecraft* 1.21.4"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         }
     ],
     "groups": [],
+    "scene_order": [
+        {
+            "name": "Scene"
+        }
+    ],
+    "current_scene": "Scene",
+    "current_program_scene": "Scene",
+    "canvases": [],
+    "current_transition": "Fade",
+    "transition_duration": 300,
+    "transitions": [],
     "quick_transitions": [
         {
             "name": "Cut",
@@ -285,13 +379,10 @@
             "fade_to_black": true
         }
     ],
-    "transitions": [],
     "saved_projectors": [],
-    "current_transition": "Fade",
-    "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": 0,
+    "scaling_level": -6,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
